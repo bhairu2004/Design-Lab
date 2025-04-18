@@ -1,3 +1,14 @@
+/*
+Hardware Implementation Steps
+Component Assembly
+Connect ESP32 GPIO pins to sensors:
+• DS18B20 Temperature: GPIO 4 (1-Wire)
+• TDS Sensor: GPIO 32 (Analog)
+• pH Sensor: GPIO 36 (Analog)
+• OLED Display: IC (SDA=GPIO 21, SCL=GPIO 22)
+• Use 3.3V power for all sensors except pH (5V)
+• Add 4.7KQ resistor between VCC and DATA for DS18B20
+*/
 #include <Arduino.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
